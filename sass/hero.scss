@@ -1,0 +1,19 @@
+@import 'style';
+
+.main-visual {
+  height: calc(100vh - 100px);
+
+  @include mq('sp') {
+    height: calc(100vh - 60px)
+  }
+
+  &__title {
+    @include mq('sp') {
+      font-size: 46px;
+    }
+  }
+
+  &__lead {
+    font-size: 20px;
+  }
+}

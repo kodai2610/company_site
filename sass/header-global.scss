@@ -1,0 +1,88 @@
+@import 'style';
+
+.header {
+  height: auto;
+  background-color: transparent;
+
+  &__row01 {
+    height: 80px;
+    background-color: $color-main;
+    display: flex;
+    align-items: center;
+
+    @include mq('sp') {
+      height: 60px;
+    }
+  }
+
+  &__logo {
+    margin: 0 auto;
+
+    @include mq('sp') {
+      margin-right: auto;
+      margin-left: 0;
+      width: 182px;
+    }
+  }
+
+  &__inner {
+    height: 100%;
+  }
+
+  &__row02 {
+    height: 58px;
+    background-color: #9FA3B9;
+    border-top: 1px solid #9FA3B9;
+    border-bottom: 1px solid #9FA3B9;
+    @include mq('sp') {
+      display: none;
+    }
+  }
+
+  &__nav {
+    margin-left: 0;
+    width: 100%;
+    height: inherit;
+    text-align: center;
+
+    li {
+      width: 20%;
+      height: inherit;
+      border-right: 1px solid #9FA3B9;
+      background-color: $color-main;
+
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+
+      a {
+        height: inherit;
+        line-height: 56px;
+        font-weight: 700;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $color-accent;
+        }
+        
+
+        &.is-active {
+          &::after {
+            content: none;
+          }
+        }
+
+        
+      }
+
+
+
+     
+    }
+  }
+
+
+
+
+
+}
